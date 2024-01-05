@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header {
+  @apply fixed right-0 left-0 top-0 z-50 bg-white;
+
+  &__informer {
+    @apply fixed bottom-0 left-0 w-full text-center px-2 py-4 bg-gray-light leading-none;
+  }
+
+  .phone-number {
+    @apply relative flex items-center font-medium text-base pl-7 mr-7 whitespace-nowrap tracking-normal no-underline uppercase text-black-medium
+    hover:text-red-main duration-300;
+  }
+}

@@ -1,0 +1,5 @@
+.btn-close {
+  @apply absolute right-3.5 top-1/2 translate-y-[-50%] w-6 h-6 cursor-pointer z-10
+    before:content-[''] before:absolute before:inset-x-1 before:inset-y-1/2 before:bg-gray before:w-8/12 before:h-0.5 before:rotate-45
+    after:content-[''] after:absolute after:inset-x-1 after:inset-y-1/2 after:bg-gray after:w-8/12 after:h-0.5 after:rotate-[-45deg];
+}

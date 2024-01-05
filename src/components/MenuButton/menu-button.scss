@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.menu-button {
+  @apply flex flex-row items-center transition-all duration-300;
+
+  &__container {
+    @apply w-6 relative h-3.5 mr-6;
+
+    span {
+      @apply absolute block h-0.5 bg-gray transition-all duration-300 ease-out;
+    }
+
+    &--first-strip {
+      @apply w-1/2 top-0 left-0 ;
+    }
+
+    &--second-strip {
+      @apply w-full top-1/2 -mt-px;
+    }
+
+    &--third-strip {
+      @apply w-1/2 bottom-0 right-0;
+    }
+  }
+}
