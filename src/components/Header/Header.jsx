@@ -27,7 +27,7 @@ const Header = () => {
           </div>
           <Navigation />
           <div className="header-right d-none d-xl-flex flex justify-center">
-            <a href="tel:+380676075784" className="phone-number type-1" target="_blank">
+            <a href="tel:+380676075784" className="phone-number type-1" target="_blank" rel="noreferrer">
               <PhoneAndroidIcon fontSize="inherit"/>
               +38 067 607 57 84
             </a>

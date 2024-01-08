@@ -4,7 +4,7 @@ const Navigation = () => {
  
 
   return (
-    <nav className="primary-nav d-none d-xl-block">
+    <nav className="primary-nav hidden desktop:block">
     <ul className='primary-nav__list'>
       <li>
         <a href="../portfolio">Портфоліо</a>

@@ -10,7 +10,7 @@
       }
       
       > ul {
-        @apply shadow-lg m-0;
+        @apply shadow-lg m-0 bg-white px-5 pt-6 pb-5;
 
         li{
           @apply mt-3.5 text-black-medium duration-300 hover:text-red-500;

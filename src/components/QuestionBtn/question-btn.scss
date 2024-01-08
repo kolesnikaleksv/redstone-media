@@ -1,5 +1,5 @@
 .btn {
-  @apply inline-block relative align-top uppercase tracking-custom whitespace-nowrap font-semibold text-white
+  @apply  relative hidden laptop:inline-block align-top uppercase tracking-custom whitespace-nowrap font-semibold text-white
    border border-solid border-red-main z-1 leading-relaxed overflow-hidden cursor-pointer text-xs py-3 px-5 ease-in-out duration-300
    hover:text-red-main hover:transition-all hover:ease-in-out hover:duration-300;
 }

@@ -1,0 +1,71 @@
+.hero-section {
+  @apply mb-32 text-center;
+
+  &__container {
+    @apply flex flex-col justify-center min-h-[400px] max-w-7xl mx-auto px-3.5 h-[calc(100vh_-_100px)];
+  }
+
+  &__title {
+    @apply relative text-[46px] top-1 mb-6 font-semibold leading-[1.125] text-black-medium max-w-[690px];
+  }
+
+  .btn-inverted {
+    @apply bg-white text-red-main hover:text-white no-underline w-fit;
+  }
+  
+  .btn-inverted::before {
+    @apply translate-y-full;
+  }
+  
+  .btn-inverted:hover::before {
+    @apply text-white translate-y-0;
+  }
+
+  &__logo-group {
+    @apply mt-11 min-h-12;
+
+    a {
+      // display: flex;
+      // flex: 1 0 auto;
+      @apply mr-11 max-w-[110px] grayscale transition duration-300 ease-in-out
+      hover:grayscale-0;
+
+      img {
+        @apply max-w-full;
+      }
+
+    }
+    a:not(:last-child) {
+      @apply mr-11 ;
+    }
+  }
+
+  &__counter-block {
+    @apply relative mb-5;
+  }
+
+  &__svg-wrapper {
+    @apply h-[335px] font-black w-full stroke-white-dirty;
+  }
+
+  text {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    @apply text-[115px] animate-move-outlines fill-transparent;
+  }
+  .text-bold {
+    @apply animate-hide-text;
+  }
+
+  &__sub-title {
+    @apply text-sm font-light text-gray leading-snug uppercase;
+  }
+
+  &__btn-scroll {
+    @apply absolute cursor-pointer bottom-10 inset-x-2/4 -mr-3.5 origin-top-left rotate-90 translate-x-2/4 -translate-y-3.5;
+
+    .dashed {
+      @apply animate-move-arrow;
+    }
+  }
+}
