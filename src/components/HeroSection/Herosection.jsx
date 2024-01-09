@@ -5,6 +5,34 @@ import it_rating from '../../images/it_rating.svg'
 import other from '../../images/other.svg'
 
 const HeroSection = () => {
+
+  const scrollToContent = () => {
+    const contentDiv = document.getElementById('content');
+    
+    if (contentDiv) {
+      const targetY = contentDiv.getBoundingClientRect().top + window.scrollY;
+      const startingY = window.scrollY;
+      const distance = targetY - startingY;
+      const duration = 2000; // Adjust the duration (in milliseconds) to control the speed
+  
+      const startTime = performance.now();
+  
+      const animateScroll = (currentTime) => {
+        const elapsedTime = currentTime - startTime;
+        const progress = Math.min(elapsedTime / duration, 1);
+        const easedProgress = easeInOutQuad(progress);
+        window.scrollTo(0, startingY + distance * easedProgress);
+  
+        if (elapsedTime < duration) {
+          requestAnimationFrame(animateScroll);
+        }
+      };
+  
+      const easeInOutQuad = (t) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
+  
+      requestAnimationFrame(animateScroll);
+    }
+  };
   return (
     // <div className="hero-section sect-spacer text-center text-xl-left animate-item animated">
     <div className="hero-section sect-spacer text-xl-left animate-item animated">
@@ -89,7 +117,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="hero-section__btn-scroll scroll-to-content">
+        <div className="hero-section__btn-scroll scroll-to-content" onClick={scrollToContent}>
           <svg
             width="63"
             height="14"
