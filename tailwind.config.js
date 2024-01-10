@@ -16,7 +16,11 @@ module.exports = {
       animation: {
         'move-outlines': 'draw 2s linear forwards',
         'hide-text': 'hidetext .8s linear forwards 1s',
-        'move-arrow': 'dash 8s linear infinite'
+        'move-arrow': 'dash 8s linear infinite',
+        'fade-inup': 'fadeInUp 1s;',
+        'fade-inup-d2': 'fadeInUp 1s .2s;',
+        'fade-inup-d3': 'fadeInUp 1s .3s;',
+
       },
       keyframes: {
         hidetext: {
@@ -28,6 +32,16 @@ module.exports = {
         dash: {
           '0%': { strokeDashoffset: "200"},
           '100%': { strokeDashoffset: "0"}
+        },
+        fadeInUp: {
+          '0%': {
+            opacity: '0',
+            transform: 'translate3d(0,100%,0)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translate3d(0,0,0)'
+          }
         }
       }
     },
