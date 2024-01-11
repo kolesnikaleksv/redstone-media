@@ -1,9 +1,4 @@
-import foodDelivery from '../../images/redstone-food-delivery.png'
-import construction from '../../images/construction.png'
-import appImg from '../../images/app.png'
-import redstoneAuto from '../../images/redstone-auto.png'
-import solution from '../../images/solution.webp'
-import brending from '../../images/brending.webp'
+import CategoryListElement from '../CategoryListElement/CategoryListElement'
 import './category.scss'
 
 const Category = () => {
@@ -20,91 +15,8 @@ const Category = () => {
             <b>створення app</b> і <b>технічна підтримка</b>.
           </p>
         </div>
-        <div className='category-section__categories'>
-          <div className="category-section__category" >
-            <a href="../sajt-dostavka-yizhi" className="category-section__category-entry">
-              <span className="category-section__category-title">Доставка їжі</span>
-              <span className="category-section__category-img">
-                <img
-                  src={foodDelivery}
-                  alt="delivery"
-                />
-              </span>
-              <div className="category-section__review-btn">
-                <i className="category-section__review-icon"></i>
-              </div>
-            </a>
-          </div>
-          <div className="category-section__category">
-            <a href="../budivelni-kompaniyi-neruhomist" className="category-section__category-entry">
-              <span className="category-section__category-title">Будівництво</span>{" "}
-              <span className="category-section__category-img">
-                <img
-                  src={construction}
-                  alt="building"
-                />
-              </span>
-              <div className="category-section__review-btn">
-                <i className="category-section__review-icon"></i>
-              </div>
-            </a>
-          </div>
-          <div className="category-section__category">
-            <a href="../stvorennja-mobilnih-dodatkiv" className="category-section__category-entry">
-              <span className="category-section__category-title">APP</span>{" "}
-              <span className="category-section__category-img">
-                <img
-                  src={appImg}
-                  alt="mobile app"
-                />
-              </span>
-              <div className="category-section__review-btn">
-                <i className="category-section__review-icon"></i>
-              </div>
-            </a>
-          </div>
-          <div className="category-section__category">
-            <a href="../websolution" className="category-section__category-entry">
-              <span className="category-section__category-title">WEB Solution</span>
-              <span className="category-section__category-img">
-                <img
-                  src={solution}
-                  alt="solution"
-                />
-              </span>
-              <div className="category-section__review-btn">
-                <i className="category-section__review-icon"></i>
-              </div>
-            </a>
-          </div>
-          <div className="category-section__category">
-            <a href="../auto" className="category-section__category-entry">
-              <span className="category-section__category-title">Авто</span>
-              <span className="category-section__category-img">
-                <img
-                  src={redstoneAuto}
-                  alt="auto"
-                />
-              </span>
-              <div className="category-section__review-btn">
-                <i className="category-section__review-icon"></i>
-              </div>
-            </a>
-          </div>
-          <div className="category-section__category">
-            <a href="../brendbuky" className="category-section__category-entry">
-              <span className="category-section__category-title">Брендування</span>
-              <span className="category-section__category-img">
-                <img
-                  src={brending}
-                  alt="brending"
-                />
-              </span>
-              <div className="category-section__review-btn">
-                <i className="category-section__review-icon"></i>
-              </div>
-            </a>
-          </div>
+        <div className='category-section__categories' >
+          <CategoryListElement/>
         </div>
         <div className="text-center">
           <a href="../portfolio" className="btn btn-inverted">

@@ -13,7 +13,7 @@ const HeroSection = () => {
       const targetY = contentDiv.getBoundingClientRect().top + window.scrollY;
       const startingY = window.scrollY;
       const distance = targetY - startingY;
-      const duration = 2000; // Adjust the duration (in milliseconds) to control the speed
+      const duration = 2000; 
   
       const startTime = performance.now();
   
@@ -21,7 +21,7 @@ const HeroSection = () => {
         const elapsedTime = currentTime - startTime;
         const progress = Math.min(elapsedTime / duration, 1);
         const easedProgress = easeInOutQuad(progress);
-        window.scrollTo(0, startingY + distance * easedProgress);
+        window.scrollTo(0, startingY + distance * easedProgress - 80);
   
         if (elapsedTime < duration) {
           requestAnimationFrame(animateScroll);
