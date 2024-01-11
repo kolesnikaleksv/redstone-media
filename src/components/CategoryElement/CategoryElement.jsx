@@ -27,8 +27,7 @@ const CategoryElement = (props) => {
       href={href}
       className="category-section__category-entry"
       ref={ ref }
-      onMouseLeave={handleMouseLeave}
-      >
+      onMouseLeave={handleMouseLeave}>
       <span className="category-section__category-title">{title}</span>
       <span className="category-section__category-img">
         <img
@@ -36,13 +35,10 @@ const CategoryElement = (props) => {
           alt={alt}
         />
       </span>
-      <div className="category-section__review-btn">
-        <i
-          className="category-section__review-icon"
-          style={{ left: imagePos.x, top: imagePos.y }}
-        >
-        </i>
-      </div>
+      <i
+        className="category-section__review-icon"
+        style={{ left: imagePos.x, top: imagePos.y }}>
+      </i>
     </a>
   )
 }

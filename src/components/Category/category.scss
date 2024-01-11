@@ -73,8 +73,8 @@
     @apply bottom-5;
   }
 
-  &__category-entry:hover > &__review-btn > &__review-icon {
-    @apply opacity-100 visible transition-all duration-300;
+  &__category-entry:hover > &__review-icon {
+    @apply opacity-100 visible transition-all duration-0;
   }
 
   &__category-title {
@@ -94,15 +94,9 @@
   }
 
   &__review-icon {
-    // transform: matrix(1, 0, 0, 1, 0, 0);
-
-    // opacity: 0;
-    // visibility: hidden;
-    // transition: opacity .3s,visibility .3s;
-
     @apply flex items-center justify-center absolute left-1/2 top-1/2 -mt-14 mr-0 mb-0 -ml-14 w-32  h-32
     font-semibold not-italic text-sm tracking-widest uppercase rounded-full text-white border border-solid border-white
-    opacity-0 invisible transition-all duration-300; 
+    opacity-0 invisible transition-all duration-0 delay-0; 
   }
 
   &__review-icon::before {
@@ -112,6 +106,7 @@
   &__review-icon::after {
     @apply content-[''] block absolute w-5 h-0.5 -mt-px -ml-2.5 bg-white border-none top-1/2 left-1/2 box-border;
   }
+  
   .btn-inverted {
     @apply bg-white text-red-main hover:text-white no-underline w-fit;
   }
