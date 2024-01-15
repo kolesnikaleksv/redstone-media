@@ -34,20 +34,18 @@ const HeroSection = () => {
     }
   };
   return (
-    // <div className="hero-section sect-spacer text-center text-xl-left animate-item animated">
     <div className="hero-section sect-spacer text-xl-left animate-item animated">
-      {/* <div className="hero-section__container d-flex flex-column justify-content-center full-height pt-0"> */}
       <div className="hero-section__container">
         <div className="grid grid-rows-2 grid-cols-1 desktop:grid-cols-12 desktop:grid-rows-1 items-center desktop:text-left">
-          <div className="grid desktop:col-start-1 desktop:col-span-7 pr-3.5">
+          <div className="grid desktop:col-start-1 desktop:col-span-7 pr-3.5 order-2 desktop:order-1">
             <div className="hero-section__title">
               Сайти <b>.</b> App <b>.</b> Брендинг - Робимо складне простим
             </div>
-            <a href="../portfolio" className="btn btn-inverted btn-md">
+            <a href="../portfolio" className="btn btn-inverted block mx-auto desktop:mx-0">
               НАШІ РОБОТИ
             </a>
             <div className="hero-section__logo-group">
-              <div className="flex justify-start items-center h-full">
+              <div className="flex justify-center desktop:justify-start items-center h-full">
                 <a
                   href="https://clutch.co/profile/redstone"
                   target="_blank"
@@ -96,7 +94,7 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-          <div className="desktop:col-start-8 desktop:col-span-5 h-full px-3.5">
+          <div className="desktop:col-start-8 desktop:col-span-5 h-full px-3.5 order-1 desktop:order-2">
             <div className="hero-section__counter-block type-1">
               <div className="hero-section__svg-wrapper type-2">
                 <svg

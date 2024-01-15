@@ -2,18 +2,20 @@
   @apply mb-24;
 
   &__container {
-    @apply flex flex-col grow-0 shrink-0 basis-full relative w-full px-4 mx-auto max-w-7xl ;
+    @apply flex flex-col grow-0 shrink-0 basis-full relative w-full px-4 mx-auto 
+    sm:max-w-[540px] md:max-w-[720px] laptop:max-w-[960px] desktop:max-w-7xl ;
   }
 
   &__title-box {
-    @apply mb-16 flex items-center justify-between;
+    @apply mb-16 flex items-center justify-center desktop:justify-between text-center desktop:text-left;
   }
   &__title {
-    @apply flex shrink grow basis-[57%] max-w-[57%] text-4xl font-semibold leading-tight text-black-medium animate-fade-inup;
+    @apply flex justify-center desktop:justify-start shrink grow basis-[57%] max-w-full desktop:max-w-[57%] text-[26px] desktop:text-4xl 
+    font-semibold leading-tight text-black-medium animate-fade-inup;
   }
 
   &__description {
-    @apply flex-1 pl-[9%] text-[15px] text-gray font-light animate-fade-inup-d2 leading-relaxed;
+    @apply hidden desktop:block flex-1 pl-[9%] text-[15px] text-gray font-light animate-fade-inup-d2 leading-relaxed;
 
     b {
       @apply font-light;
@@ -25,13 +27,17 @@
   }
 
   &__category {
-    @apply px-[15px] relative text-center overflow-hidden grow-0 shrink-0 basis-1/3 w-full;
+    @apply px-[15px] relative text-center overflow-hidden grow-0 shrink-0 basis-1/2 sm:basis-1/3 w-full;
   }
 
+  
+  &__category:nth-child(n+3) {
+    @apply mt-2.5 sm:mt-0;
+  }
+  
   &__category:nth-child(n+4) {
-    @apply mt-7;
+    @apply sm:mt-2.5 md:mt-7;
   }
-
   &__category:nth-child(6n+1) &__category-entry:before,
   &__category:nth-child(6n+6) &__category-entry:before {
     background-color: #eacc14;
@@ -62,23 +68,23 @@
   }
  
   &__category-entry:hover::before {
-    @apply h-full transition-all duration-300;
+    @apply desktop:h-full desktop:transition-all desktop:duration-300;
   }
 
   &__category-entry:hover > &__category-title {
-    @apply text-white;
+    @apply desktop:text-white;
   }
 
   &__category-entry:hover > &__category-img {
-    @apply bottom-5;
+    @apply desktop:bottom-5;
   }
 
   &__category-entry:hover > &__review-icon {
-    @apply opacity-100 visible transition-all duration-0;
+    @apply desktop:opacity-100 desktop:visible desktop:transition-all desktop:duration-0;
   }
 
   &__category-title {
-    @apply absolute flex items-center justify-center w-full left-0 top-0 text-[24px] text-black-medium font-medium leading-tight h-1/4 transition-all duration-300;
+    @apply absolute flex items-center justify-center w-full left-0 top-0 text-xl md:text-[26px] text-black-medium font-medium leading-tight h-1/4 transition-all duration-300;
   }
 
   &__category-img {
@@ -87,10 +93,6 @@
     img {
       @apply absolute left-0 top-0 right-0 bottom-0 m-auto max-w-[80%] max-h-[80%] w-auto opacity-100 transition-opacity duration-200;
     }
-  }
-
-  &__review-btn {
-    @apply absolute w-full h-full top-0 left-0 cursor-pointer;
   }
 
   &__review-icon {
@@ -106,7 +108,7 @@
   &__review-icon::after {
     @apply content-[''] block absolute w-5 h-0.5 -mt-px -ml-2.5 bg-white border-none top-1/2 left-1/2 box-border;
   }
-  
+
   .btn-inverted {
     @apply bg-white text-red-main hover:text-white no-underline w-fit;
   }

@@ -1,12 +1,13 @@
 .hero-section {
-  @apply mb-32 text-center;
+  @apply mb-12 desktop:mb-32 text-center;
 
   &__container {
-    @apply flex flex-col justify-center min-h-[400px] max-w-7xl mx-auto px-3.5 h-[calc(100vh_-_100px)];
+    @apply -mt-32 flex flex-col justify-center min-h-[400px] sm:max-w-[540px] md:max-w-[720px] laptop:max-w-[960px] desktop:max-w-7xl mx-auto 
+    px-3.5 h-screen sm:h-auto desktop:h-[calc(100vh_-_100px)];
   }
 
   &__title {
-    @apply relative text-[46px] top-1 mb-6 font-semibold leading-[1.125] text-black-medium max-w-[690px];
+    @apply relative text-[30px] desktop:text-[46px] top-1 mb-6 font-semibold leading-[1.125] text-black-medium max-w-[450px] desktop:max-w-[690px];
   }
 
   .btn-inverted {
@@ -22,12 +23,12 @@
   }
 
   &__logo-group {
-    @apply mt-11 min-h-12;
+    @apply absolute sm:static left-0 right-0 bottom-24 sm:block sm:mt-11 sm:min-h-12;
 
     a {
       // display: flex;
       // flex: 1 0 auto;
-      @apply mr-11 max-w-[110px] grayscale transition duration-300 ease-in-out
+      @apply mr-5 sm:mr-11 max-w-[110px] grayscale transition duration-300 ease-in-out
       hover:grayscale-0;
 
       img {
@@ -36,7 +37,7 @@
 
     }
     a:not(:last-child) {
-      @apply mr-11 ;
+      @apply md:mr-5 laptop:mr-10 desktop:mr-11 2xl:mr-14 ;
     }
   }
 
@@ -45,7 +46,7 @@
   }
 
   &__svg-wrapper {
-    @apply h-[335px] font-black w-full stroke-white-dirty;
+    @apply h-[150px] sm:h-[225px] desktop:h-[335px] font-black w-full stroke-white-dirty;
   }
 
   text {
@@ -58,11 +59,12 @@
   }
 
   &__sub-title {
-    @apply text-sm font-light text-gray leading-snug uppercase;
+    @apply text-xs laptop:text-[15px] desktop:text-sm font-light text-gray tracking-wider leading-snug uppercase;
   }
 
   &__btn-scroll {
-    @apply absolute cursor-pointer bottom-[100px] inset-x-2/4 -mr-3.5 origin-top-left rotate-90 translate-x-2/4 -translate-y-3.5;
+    @apply hidden desktop:block absolute cursor-pointer bottom-[100px] inset-x-2/4 -mr-3.5 origin-top-left 
+    rotate-90 translate-x-2/4 -translate-y-3.5;
 
     .dashed {
       @apply animate-move-arrow; 
