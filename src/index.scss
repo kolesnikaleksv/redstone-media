@@ -9,6 +9,12 @@
   src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
 }
 
+html:has(.fixed){
+  position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
 body {
   height: 100%;
   overflow: hidden;

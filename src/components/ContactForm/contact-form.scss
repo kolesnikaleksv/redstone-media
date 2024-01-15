@@ -1,0 +1,61 @@
+.ContactForm {
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Inter';
+  textarea,
+  select,
+  input {
+    @apply rounded-none border-none m-0 p-0 w-full;
+  }
+
+  input::placeholder {
+    @apply text-gray-middle;
+  }
+  
+  .form-row {
+    @apply flex flex-wrap mt-0 mb-12 -mx-2.5 desktop:mb-9;
+  }
+
+  .form-col {
+    @apply px-2.5;
+  }
+
+  .form-col:nth-child(n+3) {
+    @apply mt-5 desktop:mt-4;
+  }
+
+  .input {
+    @apply border-b-2 border-solid border-white-dirty py-3 px-0 text-base text-ellipsis
+    font-light shadow-none transition-all duration-300 overflow-hidden;
+
+    &.invalid {
+      @apply border-red-main;
+    }
+
+    &.invalid::placeholder {
+      @apply text-red-main;
+    }
+  }
+
+  textarea {
+    @apply block resize-none overflow-auto;
+
+    &.input {
+      @apply h-24;
+    }
+  }
+
+  .form-response {
+    @apply text-base font-normal mt-2.5 text-right;
+  }
+
+  .btn-inverted {
+    @apply bg-white text-red-main hover:text-white no-underline w-fit;
+  }
+  
+  .btn-inverted::before {
+    @apply translate-y-full;
+  }
+  
+  .btn-inverted:hover::before {
+    @apply text-white translate-y-0;
+  }
+}

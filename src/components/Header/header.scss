@@ -10,7 +10,12 @@
   }
 
   .phone-number {
-    @apply relative flex items-center font-medium text-base pl-7 mr-7 whitespace-nowrap tracking-normal no-underline uppercase text-black-medium
+    
+    @apply relative flex items-center sm:font-medium text-base pl-7 mr-7 whitespace-nowrap tracking-normal no-underline uppercase text-black-medium
     hover:text-red-main duration-300;
+    
+    span {
+      @apply hidden sm:block;
+    }
   }
 }

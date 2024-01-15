@@ -1,0 +1,53 @@
+.popup-wrapper {
+  &.active {
+    @apply left-0 translate-y-0 transition-transform duration-300 ease-in-out;
+  }
+
+  @apply fixed z-[100] top-0 w-full h-screen -left-full transition-all delay-300;
+
+  &__bg-layer {
+    @apply absolute left-0 -top-24 right-0 -bottom-24 bg-gray-light transition-all duration-300 ease-in-out opacity-0;
+  }
+
+  &__bg-layer.active {
+    @apply opacity-100;
+  }
+}
+
+.popup {
+  @apply absolute left-0 top-0 right-0 bottom-0 overflow-auto text-center transition-all duration-300 ease-out p-4 
+  tracking-normal -translate-y-full bg-white py-10 px-0
+  after:inline-block after:align-middle after:h-full after:content-[''];
+
+  &.active {
+    @apply opacity-100 visible translate-y-0 transition-all duration-300 ease-out;
+  }
+
+  &__layer-close {
+    @apply absolute left-0 bottom-0 right-0 h-screen;
+  }
+
+  &__popup-container {
+    @apply relative max-w-full text-left inline-block align-middle w-full bg-white z-1;
+  }
+
+  &__align {
+    @apply relative overflow-hidden desktop:p-0;
+  }
+
+  &__inner {
+    @apply opacity-100 delay-300 duration-1000;
+  }
+
+  &__title {
+    @apply relative top-[10px] desktop:top-[4px] text-3xl md:text-4xl text-black-medium font-medium leading-tight mb-5;
+  }
+
+  &__btn-close {
+    @apply absolute inline-block top-3.5 right-3.5 w-6 cursor-pointer z-1;
+
+    svg {
+      @apply stroke-gray transition-all duration-300;
+    }
+  }
+}
