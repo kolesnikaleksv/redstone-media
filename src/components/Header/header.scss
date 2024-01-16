@@ -18,4 +18,8 @@
       @apply hidden sm:block;
     }
   }
+
+  .btn {
+    @apply desktop:block;
+  }
 }

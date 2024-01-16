@@ -17,7 +17,7 @@ const ContactForm = () => {
     document.querySelector('.form-response').classList.add('block');
     document.querySelector('.form-response').classList.remove('hidden');
   }
- 
+
   const handleSubmit = async (e) => { console.log(formData)
     e.preventDefault();
     try {
@@ -29,8 +29,7 @@ const ContactForm = () => {
         body: JSON.stringify(formData),
       });
       
-      if (response.ok) {console.log( 'hello')
-
+      if (response.ok) {
         setFormResponse('Form submitted successfully!');
         toggleResponceBlock('green');
         setFormData({

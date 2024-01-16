@@ -1,4 +1,3 @@
-import './header.scss';
 import logo from '../../images/logo.svg'
 import informer from '../../images/informer.svg'
 import CloseButton from '../CloseBtn/CloseButton'
@@ -6,16 +5,29 @@ import MenuButton from '../MenuButton/MenuButton';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import Navigation from '../Navigation/Navigation';
 import QuestionBtn from '../QuestionBtn/QuestionBtn';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+// import { isvisible } from '../toolkitRedux/toolkitReducer';
+import { toggleVisibility } from '../../slices/popupSlice';
+
+import './header.scss';
 
 const Header = () => {
-  const [isFixed, setIsFixed] = useState(false);
-  const toggleClass = () => {
-    setIsFixed(!isFixed);
+
+  const isvisiblePopup = useSelector(state => state.toolkit.popupvisible);
+  const dispatch = useDispatch()
+
+  const togglePopup = () => {
+    
+    // use toolkitReducer
+    // dispatch(isvisible())
+
+    // use slice
+    dispatch(toggleVisibility())
   };
 
   useEffect(() => {
-    if (isFixed) {
+    if (isvisiblePopup) {
       document.documentElement.classList.add('fixed');
       document.querySelector('.popup-wrapper').classList.add('active');
       document.querySelector('.popup').classList.add('active');
@@ -29,7 +41,7 @@ const Header = () => {
       document.querySelector('.popup-wrapper').classList.remove('active');
       document.querySelector('.popup').classList.remove('active');
     };
-  }, [isFixed]);
+  }, [isvisiblePopup]);
 
   return (
     <>
@@ -54,7 +66,7 @@ const Header = () => {
               <PhoneAndroidIcon fontSize="inherit"/>
               <span>+38 067 607 57 84</span>
             </a>
-            <QuestionBtn openPopup={toggleClass}/>
+            <QuestionBtn openPopup={togglePopup}/>
           </div>
         </div>
       </header>
